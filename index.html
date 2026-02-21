@@ -19,7 +19,7 @@
         :root {
             --white: #ffffff;
             --soft-pink: #FADADD;
-            --vibrant-pink: #F75990;
+            --vibrant-pink: #F97AAD;
             --dark-pink: #d93f77;
             --charcoal: #333333;
             --text-light: #7a7a7a;
@@ -460,16 +460,19 @@
 
         .subjects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1rem;
+            justify-items: center;
         }
 
         .subject-card {
             background: var(--card-white);
             border: 1.5px solid var(--border-light);
             border-radius: 14px;
-            padding: 1.2rem 1rem;
+            padding: 1.1rem 1rem;
             text-align: center;
+            width: 100%;
+            box-sizing: border-box;
             transition: all 0.22s;
             cursor: default;
             position: relative;
@@ -497,11 +500,6 @@
 
         .subject-card:hover::before {
             transform: scaleX(1);
-        }
-
-        .subject-emoji {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
         }
 
         .subject-name {
@@ -1054,18 +1052,15 @@
 
             <!-- KS3 -->
             <div class="level-group">
-                <div class="level-title">📚 KS3 (Key Stage 3)</div>
+                <div class="level-title">KS3 – Key Stage 3</div>
                 <div class="subjects-grid">
                     <div class="subject-card">
-                        <div class="subject-emoji">🔢</div>
                         <div class="subject-name">Maths</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">✍️</div>
                         <div class="subject-name">English</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">🔬</div>
                         <div class="subject-name">Science</div>
                     </div>
                 </div>
@@ -1073,40 +1068,32 @@
 
             <!-- KS4 GCSE -->
             <div class="level-group">
-                <div class="level-title">📖 KS4 — GCSE</div>
+                <div class="level-title">KS4 – GCSE</div>
                 <div class="subjects-grid">
                     <div class="subject-card">
-                        <div class="subject-emoji">🔢</div>
                         <div class="subject-name">Maths<br><small
                                 style="color:var(--text-light);font-weight:600;font-size:0.75rem;">Foundation &
                                 Higher</small></div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">⚛️</div>
                         <div class="subject-name">Physics</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">🧪</div>
                         <div class="subject-name">Chemistry</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">🧬</div>
                         <div class="subject-name">Biology</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">➕</div>
                         <div class="subject-name">Additional Maths</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">💼</div>
                         <div class="subject-name">Business</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">📊</div>
                         <div class="subject-name">Accounts</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">📈</div>
                         <div class="subject-name">Economics</div>
                     </div>
                 </div>
@@ -1114,34 +1101,27 @@
 
             <!-- KS5 A-Level -->
             <div class="level-group" style="margin-bottom:0;">
-                <div class="level-title">🎓 KS5 — A-Level</div>
+                <div class="level-title">KS5 – A-Level</div>
                 <div class="subjects-grid">
                     <div class="subject-card">
-                        <div class="subject-emoji">🔢</div>
                         <div class="subject-name">Maths</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">⚛️</div>
                         <div class="subject-name">Physics</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">🧪</div>
                         <div class="subject-name">Chemistry</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">🧬</div>
                         <div class="subject-name">Biology</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">💼</div>
                         <div class="subject-name">Business</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">📊</div>
                         <div class="subject-name">Accounts</div>
                     </div>
                     <div class="subject-card">
-                        <div class="subject-emoji">📈</div>
                         <div class="subject-name">Economics</div>
                     </div>
                 </div>
@@ -1285,7 +1265,7 @@
                     <button type="button" class="submit-btn" onclick="submitForm()">
                         🎀 Request My Free Demo Lesson
                     </button>
-                    <p class="form-note">✅ No payment required · We'll contact you within 24 hours · 100% free demo</p>
+                    <p class="form-note">No payment required · We'll contact you within 24 hours · 100% free demo</p>
                 </div>
 
                 <div class="form-success" id="formSuccess">
