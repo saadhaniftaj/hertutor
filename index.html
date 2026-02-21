@@ -32,6 +32,12 @@
             scroll-behavior: smooth;
         }
 
+        /* Pacifico brand span */
+        .ht-brand {
+            font-family: 'Pacifico', cursive;
+            font-weight: 400;
+        }
+
         body {
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
@@ -462,14 +468,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1rem;
-            justify-items: center;
+            justify-content: center;
         }
 
         .subject-card {
             background: var(--card-white);
             border: 1.5px solid var(--border-light);
             border-radius: 14px;
-            padding: 1.1rem 1rem;
+            padding: 1.2rem 1rem;
             text-align: center;
             width: 100%;
             box-sizing: border-box;
@@ -904,17 +910,20 @@
             </linearGradient>
         </defs>
         <path fill="url(#pinkGrad1)">
-            <animate attributeName="d" dur="20s" repeatCount="indefinite" values="M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z;
+            <animate attributeName="d" dur="22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1"
+                keySplines="0.45 0 0.55 1;0.45 0 0.55 1" values="M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z;
                         M0,100 C320,20,420,20,740,100 C1060,180,1120,180,1440,100 V320 H0 V100 Z;
                         M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z" />
         </path>
         <path fill="url(#pinkGrad2)">
-            <animate attributeName="d" dur="15s" repeatCount="indefinite" values="M0,100 C320,180,420,180,740,100 C1060,20,1120,20,1440,100 V320 H0 V100 Z;
+            <animate attributeName="d" dur="17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1"
+                keySplines="0.45 0 0.55 1;0.45 0 0.55 1" values="M0,100 C320,180,420,180,740,100 C1060,20,1120,20,1440,100 V320 H0 V100 Z;
                         M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z;
                         M0,100 C320,180,420,180,740,100 C1060,20,1120,20,1440,100 V320 H0 V100 Z" />
         </path>
         <path fill="url(#pinkGrad3)">
-            <animate attributeName="d" dur="25s" repeatCount="indefinite" values="M0,130 C320,250,420,250,740,130 C1060,10,1120,10,1440,130 V320 H0 V130 Z;
+            <animate attributeName="d" dur="28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1"
+                keySplines="0.45 0 0.55 1;0.45 0 0.55 1" values="M0,130 C320,250,420,250,740,130 C1060,10,1120,10,1440,130 V320 H0 V130 Z;
                         M0,80 C320,10,420,10,740,80 C1060,150,1120,150,1440,80 V320 H0 V80 Z;
                         M0,130 C320,250,420,250,740,130 C1060,10,1120,10,1440,130 V320 H0 V130 Z" />
         </path>
@@ -945,6 +954,7 @@
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
+        <div class="hero-badge">By Girls, For Girls</div>
         <h1>Empowering Girls to Excel.</h1>
         <p>Join a worldwide tutoring network where expert female mentors with exceptional grades help you master your
             subjects and build lasting confidence.</p>
@@ -989,6 +999,14 @@
                             <div class="highlight-text">
                                 <strong>Exceptional Academic Standards</strong>
                                 <span>Every tutor is hand-picked for outstanding grades and teaching ability</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📊</div>
+                            <div class="highlight-text">
+                                <strong>Monthly Progress Reports</strong>
+                                <span>We send detailed monthly reports to parents, keeping families fully informed of
+                                    their child's progress</span>
                             </div>
                         </div>
                         <div class="highlight-item">
@@ -1281,7 +1299,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div class="footer-logo">🌸 Her Tutor</div>
+            <div class="footer-logo"><span class="ht-brand">her tutor</span></div>
             <p class="footer-tagline">Expert female tutors · Empowering Academic Excellence</p>
             <div class="footer-links">
                 <a href="#home">Home</a>
@@ -1291,8 +1309,7 @@
                 <a href="#contact">Book Now</a>
             </div>
             <hr class="footer-divider">
-            <p class="footer-copy">© 2026 Her Tutor. All rights reserved. Built with 🌸 for aspiring girls everywhere.
-            </p>
+            <p class="footer-copy">© 2026 <span class="ht-brand">her tutor</span>. All rights reserved.</p>
         </div>
     </footer>
 
