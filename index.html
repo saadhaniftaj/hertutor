@@ -13,7 +13,8 @@
         content="female tutor, girl tutor, GCSE tutor, A-Level tutor, KS3 tutor, maths tutor, science tutor, UK tutor, Her Tutor">
     <meta name="author" content="Her Tutor">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Pacifico&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --white: #ffffff;
@@ -52,48 +53,20 @@
             opacity: 0.35;
         }
 
-        /* BG Particles */
-        .bg-animation {
-            position: fixed;
-            z-index: 0;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-        }
 
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            opacity: 0.6;
-            animation: float 14s linear infinite;
-            background: var(--vibrant-pink);
-        }
 
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 0; }
-            10% { opacity: 0.5; }
-            90% { opacity: 0.4; }
-            100% { transform: translateY(-110vh); opacity: 0; }
-        }
-
-        /* NAVBAR */
+        /* NAVBAR — two-line centered layout */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
-            height: 64px;
-            background: rgba(255,255,255,0.97);
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 16px rgba(247, 89, 144, 0.1);
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(247, 89, 144, 0.1);
             border-bottom: 1px solid var(--border-light);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 0 0.5rem;
         }
 
         .nav-content {
@@ -101,8 +74,9 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 0.35rem;
             padding: 0 2rem;
         }
 
@@ -110,11 +84,27 @@
             display: flex;
             align-items: center;
             font-weight: 900;
-            font-size: 1.4rem;
-            letter-spacing: -0.03em;
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
             color: var(--vibrant-pink);
             text-decoration: none;
-            gap: 10px;
+            gap: 9px;
+        }
+
+        .logo-her {
+            font-family: 'Pacifico', cursive;
+            font-weight: 400;
+            font-size: 1.55rem;
+            color: var(--vibrant-pink);
+            letter-spacing: 0;
+        }
+
+        .logo-tutor {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            letter-spacing: -0.02em;
         }
 
         .logo-icon {
@@ -131,7 +121,8 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.2rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -150,18 +141,17 @@
         }
 
         .nav-cta {
-            margin-left: 1.5rem;
             background: var(--vibrant-pink);
             color: #fff;
             font-weight: 700;
             border: none;
             border-radius: 26px;
-            padding: 0.7em 1.8em;
-            font-size: 0.95rem;
+            padding: 0.55em 1.6em;
+            font-size: 0.88rem;
             letter-spacing: 0.01em;
             cursor: pointer;
             font-family: 'Montserrat', sans-serif;
-            box-shadow: 0 4px 20px rgba(247, 89, 144, 0.35);
+            box-shadow: 0 4px 16px rgba(247, 89, 144, 0.35);
             transition: background 0.22s, transform 0.16s, box-shadow 0.2s;
             position: relative;
             overflow: hidden;
@@ -171,17 +161,19 @@
         .nav-cta::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transform: rotate(45deg);
             animation: shine 3s linear infinite;
         }
 
         .nav-cta:hover {
             background: var(--dark-pink);
-            transform: scale(1.05);
-            box-shadow: 0 6px 28px rgba(247, 89, 144, 0.5);
+            transform: scale(1.04);
+            box-shadow: 0 6px 24px rgba(247, 89, 144, 0.5);
         }
 
         /* HERO */
@@ -194,7 +186,7 @@
             text-align: center;
             z-index: 1;
             position: relative;
-            padding: 120px 1.5rem 4rem;
+            padding: 140px 1.5rem 4rem;
         }
 
         .hero-badge {
@@ -257,9 +249,11 @@
         .hero-cta::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.25), transparent);
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.25), transparent);
             transform: rotate(45deg);
             animation: shine 3s linear infinite;
         }
@@ -424,7 +418,9 @@
             gap: 14px;
         }
 
-        .about-card:last-child { margin-bottom: 0; }
+        .about-card:last-child {
+            margin-bottom: 0;
+        }
 
         .about-card-icon {
             font-size: 1.8rem;
@@ -485,8 +481,10 @@
         .subject-card::before {
             content: '';
             position: absolute;
-            bottom: 0; left: 0;
-            width: 100%; height: 3px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
             background: linear-gradient(90deg, var(--vibrant-pink), #ff8fb6);
             transform: scaleX(0);
             transition: transform 0.22s;
@@ -539,7 +537,8 @@
         .testimonial-card::before {
             content: '"';
             position: absolute;
-            top: -10px; right: 20px;
+            top: -10px;
+            right: 20px;
             font-size: 6rem;
             color: var(--soft-pink);
             font-family: Georgia, serif;
@@ -675,9 +674,11 @@
         .submit-btn::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transform: rotate(45deg);
             animation: shine 3s linear infinite;
         }
@@ -755,7 +756,9 @@
             transition: color 0.18s;
         }
 
-        .footer-links a:hover { color: var(--vibrant-pink); }
+        .footer-links a:hover {
+            color: var(--vibrant-pink);
+        }
 
         .footer-divider {
             border: none;
@@ -771,18 +774,35 @@
 
         /* ANIMATIONS */
         @keyframes textGlow {
-            0% { filter: brightness(1); }
-            100% { filter: brightness(1.15) drop-shadow(0 0 20px rgba(247,89,144,0.4)); }
+            0% {
+                filter: brightness(1);
+            }
+
+            100% {
+                filter: brightness(1.15) drop-shadow(0 0 20px rgba(247, 89, 144, 0.4));
+            }
         }
 
         @keyframes buttonGlow {
-            0%, 100% { box-shadow: 0 4px 20px rgba(247,89,144,0.35); }
-            50% { box-shadow: 0 4px 32px rgba(247,89,144,0.65), 0 0 20px rgba(247,89,144,0.3); }
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(247, 89, 144, 0.35);
+            }
+
+            50% {
+                box-shadow: 0 4px 32px rgba(247, 89, 144, 0.65), 0 0 20px rgba(247, 89, 144, 0.3);
+            }
         }
 
         @keyframes shine {
-            0% { left: -50%; }
-            100% { left: 150%; }
+            0% {
+                left: -50%;
+            }
+
+            100% {
+                left: 150%;
+            }
         }
 
         /* MOBILE RESPONSIVE */
@@ -820,11 +840,11 @@
                 top: 64px;
                 left: 0;
                 width: 100%;
-                background: rgba(255,255,255,0.98);
+                background: rgba(255, 255, 255, 0.98);
                 flex-direction: column;
                 padding: 1.5rem 2rem;
                 gap: 1rem;
-                box-shadow: 0 8px 24px rgba(247,89,144,0.15);
+                box-shadow: 0 8px 24px rgba(247, 89, 144, 0.15);
                 border-top: 1px solid var(--border-light);
                 z-index: 200;
             }
@@ -875,8 +895,8 @@
     <svg id="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <defs>
             <linearGradient id="pinkGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#F75990;stop-opacity:0.18" />
-                <stop offset="100%" style="stop-color:#FADADD;stop-opacity:0.1" />
+                <stop offset="0%" style="stop-color:#d63375;stop-opacity:0.38" />
+                <stop offset="100%" style="stop-color:#F75990;stop-opacity:0.22" />
             </linearGradient>
             <linearGradient id="pinkGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:#FADADD;stop-opacity:0.22" />
@@ -888,43 +908,42 @@
             </linearGradient>
         </defs>
         <path fill="url(#pinkGrad1)">
-            <animate attributeName="d" dur="20s" repeatCount="indefinite"
-                values="M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z;
+            <animate attributeName="d" dur="20s" repeatCount="indefinite" values="M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z;
                         M0,100 C320,20,420,20,740,100 C1060,180,1120,180,1440,100 V320 H0 V100 Z;
                         M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z" />
         </path>
         <path fill="url(#pinkGrad2)">
-            <animate attributeName="d" dur="15s" repeatCount="indefinite"
-                values="M0,100 C320,180,420,180,740,100 C1060,20,1120,20,1440,100 V320 H0 V100 Z;
+            <animate attributeName="d" dur="15s" repeatCount="indefinite" values="M0,100 C320,180,420,180,740,100 C1060,20,1120,20,1440,100 V320 H0 V100 Z;
                         M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 V320 H0 V160 Z;
                         M0,100 C320,180,420,180,740,100 C1060,20,1120,20,1440,100 V320 H0 V100 Z" />
         </path>
         <path fill="url(#pinkGrad3)">
-            <animate attributeName="d" dur="25s" repeatCount="indefinite"
-                values="M0,130 C320,250,420,250,740,130 C1060,10,1120,10,1440,130 V320 H0 V130 Z;
+            <animate attributeName="d" dur="25s" repeatCount="indefinite" values="M0,130 C320,250,420,250,740,130 C1060,10,1120,10,1440,130 V320 H0 V130 Z;
                         M0,80 C320,10,420,10,740,80 C1060,150,1120,150,1440,80 V320 H0 V80 Z;
                         M0,130 C320,250,420,250,740,130 C1060,10,1120,10,1440,130 V320 H0 V130 Z" />
         </path>
     </svg>
 
-    <div class="bg-animation" id="bgParticles"></div>
+
 
     <!-- NAVBAR -->
     <nav>
         <div class="nav-content">
+            <!-- Row 1: Logo -->
             <a class="logo" href="#home">
                 <div class="logo-icon">🌸</div>
-                Her Tutor
+                <span class="logo-her">Her</span><span class="logo-tutor">&nbsp;Tutor</span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#subjects">Subjects</a>
-                <a href="#testimonials">Reviews</a>
-                <a href="#contact">Book Now</a>
-            </div>
-            <div style="display:flex;align-items:center;gap:1rem;">
-                <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Free Demo</button>
+            <!-- Row 2: Nav links + CTA -->
+            <div style="display:flex;align-items:center;gap:2rem;">
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#subjects">Subjects</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="nav-cta" onclick="openWhatsApp()">Book Free Demo</button>
                 <div class="hamburger" id="hamburger" onclick="toggleNav()">
                     <span></span><span></span><span></span>
                 </div>
@@ -938,8 +957,9 @@
             🎀 By Girls, For Girls
         </div>
         <h1>Empowering Girls to Excel:<br>By Girls, For Girls.</h1>
-        <p>Join a worldwide tutoring network where expert female mentors with exceptional grades help you master your subjects and build lasting confidence.</p>
-        <a href="#contact" class="hero-cta">Book Your Free Demo Lesson ✨</a>
+        <p>Join a worldwide tutoring network where expert female mentors with exceptional grades help you master your
+            subjects and build lasting confidence.</p>
+        <a href="https://wa.me/923337666849" target="_blank" class="hero-cta">Book Your Free Demo Lesson ✨</a>
 
         <div class="hero-stats">
             <div class="hero-stat">
@@ -968,8 +988,11 @@
                 <div class="about-text">
                     <p class="section-label">Our Story</p>
                     <h2>Half a Decade of <span>Proven Results</span></h2>
-                    <p>Founded by an educator with 5 years of experience in the UK tutoring sector (formerly of SeekMath). We have grown into a network of over 20 elite female tutors, all chosen for their exceptional academic grades and professional teaching experience.</p>
-                    <p>We offer demo classes to ensure every student finds their perfect academic match — because the right tutor changes everything.</p>
+                    <p>Founded by an educator with 5 years of experience in the UK tutoring sector (formerly of
+                        SeekMath). We have grown into a network of over 20 elite female tutors, all chosen for their
+                        exceptional academic grades and professional teaching experience.</p>
+                    <p>We offer demo classes to ensure every student finds their perfect academic match — because the
+                        right tutor changes everything.</p>
 
                     <div class="about-highlights">
                         <div class="highlight-item">
@@ -1035,7 +1058,8 @@
         <div class="container">
             <p class="section-label">What We Teach</p>
             <h2 class="section-title">Subjects We Cover</h2>
-            <p class="section-subtitle">From KS3 foundations to A-Level excellence — we have an expert tutor for every stage of your academic journey.</p>
+            <p class="section-subtitle">From KS3 foundations to A-Level excellence — we have an expert tutor for every
+                stage of your academic journey.</p>
 
             <!-- KS3 -->
             <div class="level-group">
@@ -1062,7 +1086,9 @@
                 <div class="subjects-grid">
                     <div class="subject-card">
                         <div class="subject-emoji">🔢</div>
-                        <div class="subject-name">Maths<br><small style="color:var(--text-light);font-weight:600;font-size:0.75rem;">Foundation & Higher</small></div>
+                        <div class="subject-name">Maths<br><small
+                                style="color:var(--text-light);font-weight:600;font-size:0.75rem;">Foundation &
+                                Higher</small></div>
                     </div>
                     <div class="subject-card">
                         <div class="subject-emoji">⚛️</div>
@@ -1142,7 +1168,9 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"I started lessons feeling behind and embarrassed to ask questions. Miss made everything so clear. My predicted grade went from a 5 to a 7. I genuinely look forward to our lessons."</p>
+                    <p class="testimonial-text">"I started lessons feeling behind and embarrassed to ask questions. Miss
+                        made everything so clear. My predicted grade went from a 5 to a 7. I genuinely look forward to
+                        our lessons."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
                         <div>
@@ -1154,7 +1182,8 @@
 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"I improved from a C to an A in six months. No other tutor was as organised or exam-focused. She taught me how to structure long-answer questions properly."</p>
+                    <p class="testimonial-text">"I improved from a C to an A in six months. No other tutor was as
+                        organised or exam-focused. She taught me how to structure long-answer questions properly."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">S</div>
                         <div>
@@ -1166,7 +1195,9 @@
 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"My daughter's vocabulary and essay structure improved massively. Her school teacher even commented on the improvement. We are very happy with the professionalism."</p>
+                    <p class="testimonial-text">"My daughter's vocabulary and essay structure improved massively. Her
+                        school teacher even commented on the improvement. We are very happy with the professionalism."
+                    </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">R</div>
                         <div>
@@ -1184,7 +1215,8 @@
         <div class="container">
             <p class="section-label">Get Started</p>
             <h2 class="section-title">Book Your Free Demo Lesson</h2>
-            <p class="section-subtitle">Fill in the form below and we'll match you with the perfect tutor within 24 hours — completely free, no commitment.</p>
+            <p class="section-subtitle">Fill in the form below and we'll match you with the perfect tutor within 24
+                hours — completely free, no commitment.</p>
 
             <div class="form-container">
                 <div id="bookingForm">
@@ -1268,7 +1300,8 @@
                 <div class="form-success" id="formSuccess">
                     <div class="success-icon">🎉</div>
                     <h3>You're all set!</h3>
-                    <p>Thank you! We'll be in touch within 24 hours to schedule your free demo lesson with a perfectly matched tutor.</p>
+                    <p>Thank you! We'll be in touch within 24 hours to schedule your free demo lesson with a perfectly
+                        matched tutor.</p>
                 </div>
             </div>
         </div>
@@ -1287,25 +1320,12 @@
                 <a href="#contact">Book Now</a>
             </div>
             <hr class="footer-divider">
-            <p class="footer-copy">© 2026 Her Tutor. All rights reserved. Built with 🌸 for aspiring girls everywhere.</p>
+            <p class="footer-copy">© 2026 Her Tutor. All rights reserved. Built with 🌸 for aspiring girls everywhere.
+            </p>
         </div>
     </footer>
 
     <script>
-        // BG Particles
-        const $bg = document.getElementById('bgParticles');
-        for (let i = 0; i < 80; i++) {
-            const d = document.createElement('div');
-            d.className = 'particle';
-            d.style.left = Math.random() * 100 + 'vw';
-            d.style.top = Math.random() * 100 + 'vh';
-            d.style.animationDuration = (8 + Math.random() * 12) + 's';
-            d.style.animationDelay = (Math.random() * 10) + 's';
-            d.style.width = (2 + Math.random() * 4) + 'px';
-            d.style.height = d.style.width;
-            d.style.opacity = Math.random() * 0.4 + 0.2;
-            $bg.appendChild(d);
-        }
 
         // Mobile nav toggle
         function toggleNav() {
@@ -1337,7 +1357,12 @@
             document.getElementById('navLinks').classList.remove('open');
         });
 
-        // Form submission
+        // WhatsApp CTA
+        function openWhatsApp() {
+            window.open('https://wa.me/923337666849', '_blank');
+        }
+
+        // Form submission — sends via WhatsApp
         function submitForm() {
             const name = document.getElementById('studentName').value.trim();
             const subject = document.getElementById('subject').value;
@@ -1349,10 +1374,19 @@
                 return;
             }
 
+            const msg = encodeURIComponent(
+                `Hello Her Tutor! 🌸%0A%0A` +
+                `Name: ${name}%0A` +
+                `Subject: ${subject}%0A` +
+                `Year Group: ${yearGroup}%0A` +
+                `Time Zone: ${timezone}%0A%0A` +
+                `I'd like to book a free demo lesson.`
+            );
+            window.open(`https://wa.me/923337666849?text=${msg}`, '_blank');
+
             document.getElementById('bookingForm').style.display = 'none';
             const success = document.getElementById('formSuccess');
             success.style.display = 'block';
-            success.style.animation = 'fadeIn 0.4s ease';
         }
     </script>
 </body>
